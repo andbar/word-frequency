@@ -1,7 +1,7 @@
 import string
 
 with open("sample.txt") as infile:
-    my_string = infile.read()
+    test_string = infile.read()
 
 
 word_dict = {}
@@ -12,7 +12,6 @@ def get_word_list(string_1):
            string_1 = string_1.replace(char, "")
     word_list = string_1.lower().split()
     return word_list
-
 
 
 def get_word_count(list_1):
@@ -28,4 +27,7 @@ def get_word_count(list_1):
         print(pair[0], pair[1])
     
 
-get_word_count(get_word_list(my_string))
+def word_frequency(my_string):
+    (get_word_count(get_word_list(my_string)))
+
+#word_frequency(test_string)
