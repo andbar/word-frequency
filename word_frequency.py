@@ -20,21 +20,22 @@ def get_word_count(list_1):
             word_dict[word] += 1
         else:
             word_dict[word] = 1
-    list_with_count = [(key, value) for key, value in word_dict.items()]
-    return list_with_count
+    return word_dict
 
-# sort_list is for the normal mode exercise, to output 20 most frequent words in descending order
-# using sort_list causes the test file to fail
-def sort_list(unsorted_list):
-    sorted_list = sorted(unsorted_list, key=lambda tup: tup[1], reverse=True)
+
+def sort_list(dict_1):
+    sorted_list = [(key, value) for key, value in dict_1.items()]
+    sorted_list = sorted(sorted_list, key=lambda tup: tup[1], reverse=True)
     first_20 = sorted_list[:20]
     return first_20
 
 
-def word_dictionary(counted_list):
-    return dict(counted_list)
-
-
 def word_frequency(my_string):
-    return word_dictionary(get_word_count(get_word_list(my_string)))
+    return get_word_count(get_word_list(my_string))
+    
+#sort_list(get_word_count(get_word_list(test_string)))
+#word_frequency(test_string)
+
+# sort_list is for the normal mode exercise, to output 20 most frequent words in descending order
+# using sort_list causes the test file to fail
     
