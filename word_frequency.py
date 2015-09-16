@@ -33,7 +33,7 @@ def sort_list(dict_1):
 def word_frequency(my_string):
     return get_word_count(get_word_list(my_string))
     
-#sort_list(get_word_count(get_word_list(test_string)))
+#sort_list(word_frequency(test_string))
 #word_frequency(test_string)
 
 # sort_list is for the normal mode exercise, to output 20 most frequent words in descending order
