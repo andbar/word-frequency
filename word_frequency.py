@@ -43,7 +43,7 @@ def remove_words(list_2, dict_2):
 
 
 def sort_list(dict_1):
-    sorted_list = [(key, value) for key, value in dict_1.items()]
+    sorted_list = list(dict_1.items())
     sorted_list = sorted(sorted_list, key=lambda tup: tup[1], reverse=True)
     first_20 = sorted_list[:20]
     return first_20
